@@ -132,11 +132,11 @@ class PentaGo:
                 token = self.turn_token()
                 if token == PentaGoBoard.RED:
                     value, cell, rotation = self.red_player(self,
-                        self.board.field, 2, -math.inf, math.inf, True)
+                        self.board.field, 2, True)
                     print('move value: ', value)
                 elif token == PentaGoBoard.BLUE:
                     value, cell, rotation = self.blue_player(self,
-                        self.board.field, 2, -math.inf, math.inf, True)
+                        self.board.field, 2, True)
                     print('move value: ', value)
                 self.attempt_move(cell, rotation)
                 stop_ai_time = pygame.time.get_ticks()
